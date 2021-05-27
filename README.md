@@ -13,6 +13,7 @@ I decided to create a simple Discord using Python in order to advance my coding 
 
 ## To do:
 - Add messages when commands are executed succesfully
+- Queue system
 - Have the bot always on
 - Include eventual jokes
 
