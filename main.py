@@ -1,11 +1,11 @@
 import discord
+import os
 from discord.ext import commands
 from discord.utils import get
 from discord import FFmpegPCMAudio
 from discord import TextChannel
 from youtube_dl import YoutubeDL
 
-TOKEN = 'ODQ3NTc2MDY0NDgxOTUxNzY1.YLAEuA.XlmFdBe9Rxjz542eu9dnSqv-js4'
 client = commands.Bot(command_prefix='.')
 
 players = {}
@@ -69,4 +69,4 @@ async def stop(ctx):
     if voice.is_playing():
         voice.stop()
 
-client.run(TOKEN)
+client.run(os.getenv('TOKEN'))
