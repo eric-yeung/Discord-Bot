@@ -1,21 +1,24 @@
 import discord
 import os
+# load our local env so we dont have the token in public
+from dotenv import load_dotenv
 from discord.ext import commands
 from discord.utils import get
 from discord import FFmpegPCMAudio
 from discord import TextChannel
 from youtube_dl import YoutubeDL
 
-client = commands.Bot(command_prefix='.')
-
+load_dotenv()
+client = commands.Bot(command_prefix='.')  # prefix our commands with '.'
 players = {}
 
 
-@client.event
+@client.event  # check if bot is ready
 async def on_ready():
     print('Bot online')
 
 
+# command for bot to join the channel of the user, if the bot has already joined and is in a different channel, it will move to the channel the user is in
 @client.command()
 async def join(ctx):
     channel = ctx.message.author.voice.channel
@@ -26,13 +29,13 @@ async def join(ctx):
         voice = await channel.connect()
 
 
+# command to play sound from a youtube URL
 @client.command()
 async def play(ctx, url):
     YDL_OPTIONS = {'format': 'bestaudio', 'noplaylist': 'True'}
     FFMPEG_OPTIONS = {
         'before_options': '-reconnect 1 -reconnect_streamed 1 -reconnect_delay_max 5', 'options': '-vn'}
     voice = get(client.voice_clients, guild=ctx.guild)
-    # channel = ctx.message.author.channel
 
     if not voice.is_playing():
         with YoutubeDL(YDL_OPTIONS) as ydl:
@@ -40,12 +43,13 @@ async def play(ctx, url):
         URL = info['url']
         voice.play(FFmpegPCMAudio(URL, **FFMPEG_OPTIONS))
         voice.is_playing()
-        await TextChannel.send("Now playing")
+# check if the bot is already playing
     else:
         await ctx.send("Already playing song")
         return
 
 
+# command to resume voice if it is paused
 @client.command()
 async def resume(ctx):
     voice = get(client.voice_clients, guild=ctx.guild)
@@ -54,6 +58,7 @@ async def resume(ctx):
         voice.resume()
 
 
+# command to pause voice if it is playing
 @client.command()
 async def pause(ctx):
     voice = get(client.voice_clients, guild=ctx.guild)
@@ -62,6 +67,7 @@ async def pause(ctx):
         voice.pause()
 
 
+# command to stop voice
 @client.command()
 async def stop(ctx):
     voice = get(client.voice_clients, guild=ctx.guild)
