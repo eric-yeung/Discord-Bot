@@ -11,6 +11,7 @@ I decided to create a simple Discord using Python in order to advance my coding 
 - Pause
 - Stop
 - Resume
+- Clear messages in channel
 
 ## To do:
 
