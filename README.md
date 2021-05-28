@@ -19,6 +19,7 @@ I decided to create a simple Discord using Python in order to advance my coding 
 - Queue system
 - Have the bot always on
 - Include eventual jokes
+- use cogs to organize commands
 
 ## Dependecies:
 
