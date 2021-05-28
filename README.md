@@ -5,19 +5,22 @@
 I decided to create a simple Discord using Python in order to advance my coding skills.
 
 ## This bot as of right now can:
-* Join the channel you're in 
-* Play from Youtube
-* Pause
-* Stop
-* Resume
+
+- Join the channel you're in
+- Play from Youtube
+- Pause
+- Stop
+- Resume
 
 ## To do:
-- Add messages when commands are executed succesfully
+
+- Add messages when commands are executed succesfully ✔
 - Queue system
 - Have the bot always on
 - Include eventual jokes
 
 ## Dependecies:
+
 - discord.py
 - ffmpeg
 - YouTube-dl

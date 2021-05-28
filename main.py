@@ -10,6 +10,7 @@ from youtube_dl import YoutubeDL
 
 load_dotenv()
 client = commands.Bot(command_prefix='.')  # prefix our commands with '.'
+
 players = {}
 
 
@@ -79,6 +80,13 @@ async def stop(ctx):
     if voice.is_playing():
         voice.stop()
         await ctx.send('Stopping...')
+
+
+# command to clear channel messages
+@client.command()
+async def clear(ctx, amount=5):
+    await ctx.channel.purge(limit=amount)
+    await ctx.send("Messages have been cleared")
 
 
 client.run(os.getenv('TOKEN'))
