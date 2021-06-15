@@ -17,7 +17,7 @@ I decided to create a simple Discord using Python in order to advance my coding 
 
 - Add messages when commands are executed succesfully ✔
 - Queue system
-- Have the bot always on
+- Have the bot always on (I would have to pay for this option so it's really not worth it as of right now)
 - Include eventual jokes
 - use cogs to organize commands
 
