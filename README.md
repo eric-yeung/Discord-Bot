@@ -2,7 +2,7 @@
 
 # Discord Bot that plays music! ![python](https://img.shields.io/badge/Python-3.9.5%20-brightgreen)
 
-I decided to create a simple Discord using Python in order to advance my coding skills.
+I decided to create a simple Discord bot using Python in order to advance my coding skills.
 
 ## This bot as of right now can:
 
