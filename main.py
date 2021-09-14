@@ -88,5 +88,12 @@ async def clear(ctx, amount=5):
     await ctx.channel.purge(limit=amount)
     await ctx.send("Messages have been cleared")
 
+@client.command()
+async def leave(ctx):
+   if(ctx.voice_client):
+       await ctx.guild.voice_client.disconnect()
+       await ctx.send("Bot is leaving your VC!")
+   else:
+        await ctx.send("I am not in VC. Please use join so I can hop in your VC")
 
 client.run(os.getenv('TOKEN'))
