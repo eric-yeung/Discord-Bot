@@ -22,12 +22,12 @@ async def on_ready():
 # command for bot to join the channel of the user, if the bot has already joined and is in a different channel, it will move to the channel the user is in
 @client.command()
 async def join(ctx):
-    channel = ctx.message.author.voice.channel
-    voice = get(client.voice_clients, guild=ctx.guild)
-    if voice and voice.is_connected():
-        await voice.move_to(channel)
+    if (ctx.author.voice):
+        channel = ctx.author.voice.channel
+        await channel.connect()
+        await ctx.send("Bot is joining to your VC!")
     else:
-        voice = await channel.connect()
+        await ctx.send("You need to be in VC before I can hop in!")
 
 
 # command to play sound from a youtube URL
