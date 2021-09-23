@@ -4,6 +4,8 @@
 
 I decided to create a simple Discord bot using Python in order to advance my coding skills.
 
+**Please don't ask me for help with your code, this code is simple enough if you have a basic understanding of code**
+
 ## This bot as of right now can:
 
 - Join the channel you're in
