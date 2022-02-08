@@ -4,9 +4,7 @@
 
 I decided to create a simple Discord bot using Python in order to advance my coding skills.
 
-**Please don't ask me for help with your code, this code is simple enough if you have a basic understanding of code**
-
-**DO NOT COPY AND PASTE THIS CODE IF YOU DO NOT KNOW WHAT YOU ARE DOING. I WILL NOT HELP YOU.**
+**DO NOT COPY AND PASTE THIS CODE IF YOU DO NOT KNOW WHAT YOU ARE DOING.**
 
 ## This bot as of right now can:
 
