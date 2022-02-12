@@ -6,6 +6,8 @@ I decided to create a simple Discord bot using Python and the Discord.py API.
 
 **DO NOT COPY AND PASTE THIS CODE IF YOU DO NOT KNOW WHAT YOU ARE DOING.**
 
+<img src= "https://github.com/eric-yeung/Discord-Bot/blob/master/unknown.png?raw=true" height="300">
+
 ## This bot as of right now can:
 
 - Join the channel you're in
